@@ -1,7 +1,7 @@
 # BioArena
 
-Differential testing of [BioPAIthon](https://github.com/dbolser/BioPAIthon) against
-Biopython. Latest run: `biopython==1.88` vs BioPAIthon main, in [REPORT.md](REPORT.md)
+Differential testing of [biop-ai](https://github.com/BioAGI-org/biop-ai) (formerly BioPAIthon)
+against Biopython. Latest run: `biopython==1.88` vs biop-ai main, in [REPORT.md](REPORT.md)
 (the arena) and [CRUCIBLE.md](CRUCIBLE.md) (the crucible). The first run, release for
 release (`biopython==1.88` vs `biopaithon==1.88`), is kept in [REPORT-1.88.md](REPORT-1.88.md)
 and [CRUCIBLE-1.88.md](CRUCIBLE-1.88.md).
@@ -11,7 +11,7 @@ Two venues:
 - **The arena** (`arena.py`): downstream projects' own test suites, run twice,
   once on `biopython==1.88` and once on `biopaithon==1.88`. Only the delta
   between the two runs is reported. A test that fails on both is the project's
-  problem; a test that passes on Biopython and fails on BioPAIthon is ours.
+  problem; a test that passes on Biopython and fails on biop-ai is ours.
 - **The crucible** (`crucible.py`): real files from the wild (RCSB mmCIF,
   BinaryCIF and PDB, Pfam Stockholm, GenBank) parsed by both libraries, with
   the parsed results digested and compared field by field.
