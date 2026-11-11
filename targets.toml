@@ -57,6 +57,8 @@ tests = "pytest tests"
 # --- phylogenetics and alignment (Phylo, AlignIO, Align, SeqIO, Nexus)
 [[target]]
 name = "augur"
+# augur reads the Biopython version from distribution metadata, and the fork's distribution is not called "biopython".
+patch = "sed -i 's/installed_version(\"biopython\")/Bio.__version__/' augur/io/sequences.py"
 repo = "https://github.com/nextstrain/augur"
 install = [".[dev]"]
 tests = "pytest tests"
